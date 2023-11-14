@@ -1,0 +1,65 @@
+      <style>
+        #sub{
+          background-color: darkcyan;
+          color: cornsilk;
+        }
+        #sub:hover{
+            background-color: red;
+            color: white;
+
+        }
+      </style>
+<form class="addUser">
+              <!-- name -->
+              <label>Name:</label>
+              <input type="text" name="name" placeholder="Name" class="form-control"  id="name" >
+              <div class="errName"></div>
+              <br>
+              <!-- email -->
+              <label>Email:</label>
+              <input type="email" name="email" placeholder="email" class="form-control"  id="email">
+              <div class="errEmail"></div>
+              <br>
+              <!-- password -->
+              <label>Password:</label>
+              <input type="password" name="pass" placeholder="password" class="form-control" id="password" >
+              <div class="errPass"></div>
+              <br>
+              <!-- image -->
+              <label>Image:</label>
+              <input type="file" name="img"  class="form-control" id="img">
+              <div class="errFile"></div>
+              <br>
+              <!-- privliges -->
+              <label>Privliges:</label>
+              <select name="priv" class="form-control" id="priv">
+                  <option  selected id="priv1" value="0">choose somthing
+                  </option>
+    <?php 
+      require_once"functions/connect.php";
+      $select_priv ="SELECT * FROM privliges ";
+      $res3 = $conn->query($select_priv);
+      foreach($res3 as $priv){
+    ?>  
+                          
+                    <option value="<?php echo $priv['id'] ?>"><?php echo $priv['name'] ?></option>  
+                    <?php    }?> 
+              </select>
+              <div class="errPriv"></div>
+              <br><br><br>
+              <br>
+              <input id="sub" type="submit" value="Add New User" class="form-control">
+</form>
+                 <br><br><br>
+                                <!-- card of results -->
+              <div class="card" id="mycard" style="width: 70rem;">
+                  <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Add User</h6>
+                      <p class="card-text"> </p><br><br>
+                  
+
+                      <a  id="userHome" href="users.php" type="button" class="btn btn-primary">Home</a>
+                      <a  id="userEdit" href="" type="button" class="btn btn-danger">Add More New Users</a>
+                  </div>
+              </div   

@@ -1,0 +1,45 @@
+#sub{
+    background-color: darkcyan;
+    color: cornsilk;
+}
+#sub:hover{
+    background-color: red;
+    color: white;
+
+}
+.errPassEdit{
+    color: blue;
+}
+/* card */
+#userHome{
+    width: 132px;
+    margin-left: 5px;
+}
+#userEdit{
+    width: 202px;
+}
+.card-text{
+    display: inline-block;
+}
+#result{
+    display: inline-block;
+}
+/* proplems */
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.75rem;
+    background-color: cyan;
+    border-radius: 7px;
+} 
+.card{
+   
+    margin-left: auto;
+    width: 50rem;
+    margin-right: auto;
+    margin-top: -33px;
+    width: 70rem;
+    border-radius: 6px;
+    display: none;
+}
